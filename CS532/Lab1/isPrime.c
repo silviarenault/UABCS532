@@ -8,7 +8,7 @@ To execute use: ./isPrime
 */
 
 bool primeTest(int num){
-    if (num==1)
+    if (num<=1)
         return false;
     for(int i=num-1; i>1; i--)
         if (num%i==0)
@@ -19,7 +19,7 @@ bool primeTest(int num){
 int main(int given_number){
     printf("Enter an integer: ");
     scanf("%d", &given_number);
-    if (given_number==2 || primeTest(given_number))
+    if (primeTest(given_number))
         printf ("%d is a prime number\n", given_number);
     else
         printf ("%d is not a prime number\n", given_number);
