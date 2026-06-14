@@ -1,4 +1,9 @@
 #include <stdio.h>
+/*
+To compile use: gcc -o inSort inSort.c
+
+To execute use: ./inSort
+*/
 
 int insertionSort(int N){
     int arr[N];
