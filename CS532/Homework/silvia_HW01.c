@@ -22,8 +22,8 @@ int sumOfDigits(int n){
             sum+=temp; 
             n=(n-temp)/10; //removes the ones digit by subtracting it and dividing by ten to make the tens digit the one
         }
-    return sum;
     }
+    return sum;
 }   
 
 int UABMaxMinDiff(int *arr, int len){
