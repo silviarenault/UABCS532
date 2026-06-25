@@ -11,13 +11,13 @@ int main(int argc, char *argv[]){
     long int n;
     char buf[BUFFSIZE];
 
-    if(argc!=3){
+    if(argc!=3){ //check number of arguments
         printf("Usage: %s <destination_filename> <source_filename>\n", argv[0]);
         exit (-1);
     }
     f1=open(argv[1], O_WRONLY | O_APPEND, 0700);
     f2=open(argv[2], O_RDONLY);
-    if(f1==-1 || f2==-1){
+    if(f1==-1 || f2==-1){ //makes sure files exist, indicated which file is not opening
         if(f1==-1){
             printf("Error opening %s\n", argv[1]); 
         }
@@ -26,7 +26,7 @@ int main(int argc, char *argv[]){
         }
         exit (-1);
     }
-    if(strcmp(argv[1],argv[2])==0){
+    if(strcmp(argv[1],argv[2])==0){ //checks that both file arguments are not the same file
         printf("Cannot concatenate a file to itself\n");
         exit (-1);
     }
